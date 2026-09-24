@@ -85,7 +85,7 @@ function App() {
       <AuthProvider>
         <CartProvider>
           <WishlistProvider>
-            <BrowserRouter>
+            <BrowserRouter basename="/E-commerce-Beauty-Product/">
               <AppContent />
             </BrowserRouter>
           </WishlistProvider>
