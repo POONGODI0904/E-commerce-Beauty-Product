@@ -38,10 +38,10 @@ const HomePage = () => {
           api.get('/products?limit=8&newArrival=true')
         ]);
 
-        setCategories(catRes.data);
-        setTrendingProducts(trendRes.data.products || []);
-        setBestsellers(bestRes.data.products || []);
-        setNewArrivals(newRes.data.products || []);
+        setCategories(catRes.data.categories || catRes.data.data || catRes.data || []);
+setTrendingProducts(trendRes.data.products || trendRes.data.data || trendRes.data || []);
+setBestsellers(bestRes.data.products || bestRes.data.data || bestRes.data || []);
+setNewArrivals(newRes.data.products || newRes.data.data || newRes.data || []);
       } catch (err) {
         console.error('Failed to load home page content:', err.message);
       } finally {
